@@ -107,3 +107,6 @@ button {
 input {
   color: var(--text-colorB);
 }
+img {
+  display: block;
+}

@@ -7,7 +7,7 @@
   margin: 0 auto;
   max-width: 1440px;
   padding: 46px 64px 52px;
-  height: calc(100vh - 72px);
+  /* height: calc(100vh - 72px); */
 }
 .boxTools {
   min-width: 366px;
@@ -47,4 +47,9 @@
   position: absolute;
   left: 20px;
   pointer-events: none;
+}
+.wrapperList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

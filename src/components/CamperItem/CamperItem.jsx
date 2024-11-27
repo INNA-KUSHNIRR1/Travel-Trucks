@@ -3,7 +3,9 @@ import Button from '../Button/Button';
 import SvgIcon from '../SvgIcon/SvgIcon';
 import css from './CamperItem.module.css';
 
-const CamperItem = ({ camperId }) => {
+const CamperItem = ({ camper, camperId }) => {
+  console.log('camper', camper);
+
   const [isSelectedCamper, setIsSelectedCamper] = useState(false);
 
   const toggleSelect = () => {
@@ -23,14 +25,21 @@ const CamperItem = ({ camperId }) => {
     const storedSelected = JSON.parse(localStorage.getItem('selected')) || [];
     setIsSelectedCamper(storedSelected.includes(camperId));
   }, [camperId]);
-
+  const { gallery, name, rating, reviews, description, location } = camper;
   return (
     <>
       <div className={css.card}>
-        <img className={css.img} src="" alt="" />
+        <div className={css.imgWrapper}>
+          <img
+            className={css.img}
+            src={gallery[0].original}
+            alt={description}
+          />
+        </div>
+
         <div className={css.wrapper}>
           <div className={css.title}>
-            <h4>Name</h4>
+            <h4>{name}</h4>
             <div className={css.price}>
               <p>€8000</p>
 
@@ -47,20 +56,29 @@ const CamperItem = ({ camperId }) => {
               />
             </div>
           </div>
-          <div className={css.reviewAndLocation}>
-            <div className={css.box}>
-              <SvgIcon id="icon-star-Pressed" width="16" height="16" />
+          <div className={css.info}>
+            <div className={css.reviewAndLocation}>
+              <div className={css.box}>
+                <SvgIcon id="icon-star-Pressed" width="16" height="16" />
 
-              <span>4.4(2 отзыва)</span>
+                <span>
+                  {rating}({reviews.length} reviews)
+                </span>
+              </div>
+              <div className={css.box}>
+                <SvgIcon
+                  id="icon-Map"
+                  width="16"
+                  height="16"
+                  stroke="#101828"
+                />
+                <span>{location}</span>
+              </div>
             </div>
-            <div className={css.box}>
-              <SvgIcon id="icon-Map" width="16" height="16" stroke="#101828" />
-              <span>Kyiv</span>
-            </div>
+            <p className={css.description}>{description}</p>
+            <ul className={css.listOptions}>listOptions</ul>
+            <Button size="normal">Show more</Button>
           </div>
-          <p>description</p>
-          <ul className={css.listOptions}>listOptions</ul>
-          <Button size="normal">Show more</Button>
         </div>
       </div>
     </>

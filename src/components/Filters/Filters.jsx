@@ -6,7 +6,7 @@ import { forms } from '../../../helpers/forms';
 
 const Filters = () => {
   const [selectedOption, setSelectedOption] = useState([]);
-  console.log('selectedCriteria', selectedOption);
+  console.log('selectedOption', selectedOption);
 
   const [selectedForm, setSelectedForm] = useState(null);
   console.log('selectedForm', selectedForm);
