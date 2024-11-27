@@ -1,4 +1,5 @@
 .icon {
-  stroke: var(--fill-icon);
-  fill: none;
+  /* display: block; */
+  /* stroke: #101828;
+  fill: white; */
 }

@@ -18,7 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: calc(100vh - 81px);
+  height: calc(100vh - 72px);
   padding: 64px;
   overflow-y: auto;
   margin: 0 auto;

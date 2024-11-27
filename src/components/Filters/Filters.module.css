@@ -1,0 +1,114 @@
+.filters {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+  margin-bottom: 32px;
+}
+.listOptions {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  column-gap: 10px;
+  width: 100%;
+  height: 225px;
+  overflow-y: auto;
+  color: #101828;
+  padding-top: 24px;
+  border-top: 1px solid #dadde1;
+  margin-bottom: 32px;
+}
+
+/* Стили для самой полосы прокрутки */
+.listOptions::-webkit-scrollbar {
+  width: 6px; /* Ширина вертикальной полосы прокрутки */
+}
+
+/* Стили для ползунка (thumb) */
+.listOptions::-webkit-scrollbar-thumb {
+  background-color: #dadde1; /* Цвет ползунка */
+  border-radius: 12px; /* Скругленные углы ползунка */
+  opacity: 0;
+}
+.listOptions:hover::-webkit-scrollbar-thumb {
+  opacity: 1;
+  background: #dadde1;
+  border-radius: 12px;
+}
+/* Стили для фона полосы прокрутки */
+.listOptions::-webkit-scrollbar-track {
+  background-color: #f7f7f7; /* Цвет фона полосы прокрутки */
+  opacity: 0;
+  height: 90vh;
+}
+
+/* Эффект при наведении на ползунок */
+.listOptions::-webkit-scrollbar-thumb:hover {
+  background-color: #6c717b; /* Темнее при наведении */
+  cursor: grabbing;
+}
+.listOptions::-webkit-scrollbar-thumb:active {
+  background: #dadde1;
+  border-radius: 12px;
+}
+
+.height {
+  height: 121px;
+  overflow: hidden;
+}
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 24px;
+  height: 24px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dadde1;
+  border-radius: 12px;
+  padding: 16px 18px;
+  width: 112px;
+  height: 96px;
+  text-align: center;
+
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+.item:hover {
+  border-color: #6c717b;
+}
+.item.selected {
+  border-color: #e44848;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.boxSpecial {
+  padding: 4px;
+}
+input[type='checkbox'] {
+  display: none; /* Скрываем стандартный чекбокс */
+}
+.radioInput {
+  display: none;
+}
+
+.labelForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}

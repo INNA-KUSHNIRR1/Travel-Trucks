@@ -1,0 +1,50 @@
+.sectionCatalog {
+  /* background-color: white; */
+}
+.contentCatalog {
+  display: flex;
+  gap: 63px;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 46px 64px 52px;
+  height: calc(100vh - 72px);
+}
+.boxTools {
+  width: 366px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #6c717b;
+  margin-bottom: 42px;
+}
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input {
+  width: 100%;
+  height: 56px;
+  border-radius: 12px;
+  padding: 18px 218px 18px 48px;
+  background-color: #f7f7f7;
+  border: none;
+  outline: none;
+  color: #101828;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.input::placeholder {
+  color: #101828;
+  opacity: 0.8;
+}
+.map {
+  position: absolute;
+  left: 20px;
+  pointer-events: none;
+}
