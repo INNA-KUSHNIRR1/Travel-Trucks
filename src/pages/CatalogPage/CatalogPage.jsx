@@ -1,4 +1,5 @@
 import Button from '../../components/Button/Button';
+import CampersList from '../../components/CampersList/CampersList';
 import Filters from '../../components/Filters/Filters';
 import SvgIcon from '../../components/SvgIcon/SvgIcon';
 import css from './CatalogPage.module.css';
@@ -28,7 +29,7 @@ const CatalogPage = () => {
           <Filters />
           <Button>Search</Button>
         </div>
-        <div>list{/* <CampersList/> */}</div>
+        <CampersList />
       </div>
     </section>
   );

@@ -18,3 +18,12 @@
 .transparent:focus-visible {
   border: 1px solid var(--color-border-button-hover);
 }
+.normal {
+  width: 166px;
+  padding: 16px;
+  text-align: center;
+}
+.large {
+  width: 177px;
+  padding: 16px;
+}

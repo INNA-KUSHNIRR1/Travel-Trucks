@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import SvgIcon from '../SvgIcon/SvgIcon';
 import css from './Filters.module.css';
-import { options } from '../../../public/helpers/options';
-import { forms } from '../../../public/helpers/forms';
+import { options } from '../../../helpers/options';
+import { forms } from '../../../helpers/forms';
 
 const Filters = () => {
   const [selectedOption, setSelectedOption] = useState([]);
@@ -79,7 +79,6 @@ const Filters = () => {
                     value={form.type}
                     checked={selectedForm === form.type}
                     onChange={() => handleSelectForm(form.type)}
-                    className={css.radioInput}
                   />
                   <div className={css.labelForm}>
                     <SvgIcon

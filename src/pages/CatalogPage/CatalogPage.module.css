@@ -10,7 +10,7 @@
   height: calc(100vh - 72px);
 }
 .boxTools {
-  width: 366px;
+  min-width: 366px;
 }
 
 .label {

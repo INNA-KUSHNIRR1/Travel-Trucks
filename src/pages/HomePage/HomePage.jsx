@@ -11,7 +11,7 @@ const HomePage = () => {
           You can find everything you want in our catalog
         </p>
         <Link to="/catalog">
-          <Button>View Now</Button>
+          <Button size="large">View Now</Button>
         </Link>
       </div>
     </section>
