@@ -1,9 +1,26 @@
 import './App.css';
 
+import { Route, Routes } from 'react-router-dom';
+
+import './index.css';
+import HomePage from './pages/HomePage/HomePage';
+import CatalogPage from './pages/CatalogPage/CatalogPage';
+import IndividualCamperPage from './pages/IndividualCamperPage/IndividualCamperPage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+import Header from './components/Header/Header';
+
 function App() {
   return (
     <>
-      <div>APP</div>
+      <div className="app">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/catalog/:id" element={<IndividualCamperPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </div>
     </>
   );
 }

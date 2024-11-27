@@ -1,0 +1,20 @@
+/*color type*/
+
+.red:hover,
+.red:focus,
+.red:focus-visible {
+  background-color: var(--background-button-hover);
+}
+
+.transparent {
+  background-color: var(--background-buttonW);
+  border: 1px solid var(--color-border);
+  color: var(--text-colorB);
+  padding: 16px 32px;
+}
+
+.transparent:hover,
+.transparent:focus,
+.transparent:focus-visible {
+  border: 1px solid var(--color-border-button-hover);
+}

@@ -1,0 +1,15 @@
+.sectionHeader {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #f2f4f7;
+}
+.headerContent {
+  text-align: start;
+  flex-shrink: 0;
+  padding: 28px 64px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 450px;
+}
