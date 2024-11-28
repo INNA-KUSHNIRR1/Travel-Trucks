@@ -1,11 +1,10 @@
-import { useLocation } from 'react-router-dom';
 import css from './Features.module.css';
 import OptionsList from '../OptionsList/OptionsList';
+import { useSelector } from 'react-redux';
+import { selectedCamper } from '../../redux/campers/selectors';
 
 const Features = () => {
-  const location = useLocation();
-  const camper = location.state;
-  console.log('camper', camper);
+  const camper = useSelector(selectedCamper);
   const { form, length, width, height, tank, consumption } = camper;
 
   return (

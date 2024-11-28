@@ -1,7 +1,7 @@
 import './App.css';
 import './index.css';
 import { Route, Routes } from 'react-router-dom';
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const CatalogPage = lazy(() => import('./pages/CatalogPage/CatalogPage'));
 const IndividualCamperPage = lazy(() =>
@@ -15,19 +15,22 @@ const Layout = lazy(() => import('./components/Layout'));
 function App() {
   return (
     <>
-      <div className="app">
-        <Layout>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/catalog" element={<CatalogPage />} />
-            <Route path="/catalog/:id" element={<IndividualCamperPage />}>
-              <Route path="features" element={<Features />} />
-              <Route path="reviews" element={<Reviews />} />
-            </Route>
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-        </Layout>
-      </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <div className="app">
+          <Layout>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/catalog" element={<CatalogPage />} />
+              <Route path="/catalog/:id" element={<IndividualCamperPage />}>
+                <Route index element={<Features />} />
+                <Route path="features" element={<Features />} />
+                <Route path="reviews" element={<Reviews />} />
+              </Route>
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </Layout>
+        </div>
+      </Suspense>
     </>
   );
 }

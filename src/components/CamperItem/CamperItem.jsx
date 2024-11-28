@@ -4,8 +4,11 @@ import SvgIcon from '../SvgIcon/SvgIcon';
 import css from './CamperItem.module.css';
 import { Link } from 'react-router-dom';
 import OptionsList from '../OptionsList/OptionsList';
+import { useDispatch } from 'react-redux';
+import { getByIdCamperThink } from '../../redux/campers/operations';
 
 const CamperItem = ({ camper, camperId }) => {
+  const dispatch = useDispatch();
   //   console.log('camper', camper);
 
   const [isSelectedCamper, setIsSelectedCamper] = useState(false);
@@ -28,6 +31,11 @@ const CamperItem = ({ camper, camperId }) => {
     setIsSelectedCamper(storedSelected.includes(camperId));
   }, [camperId]);
   const { gallery, name, rating, reviews, description, location } = camper;
+
+  const handleGetByIdCamper = () => {
+    dispatch(getByIdCamperThink(camperId));
+  };
+
   return (
     <>
       <div className={css.card}>
@@ -81,7 +89,9 @@ const CamperItem = ({ camper, camperId }) => {
             <OptionsList camper={camper} />
 
             <Link to={`/catalog/${camperId}`}>
-              <Button size="normal">Show more</Button>
+              <Button size="normal" onClick={handleGetByIdCamper}>
+                Show more
+              </Button>
             </Link>
           </div>
         </div>

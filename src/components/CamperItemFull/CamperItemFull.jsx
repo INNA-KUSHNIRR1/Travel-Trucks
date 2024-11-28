@@ -4,7 +4,7 @@ import css from './CamperItemFull.module.css';
 const CamperItemFull = ({ camper }) => {
   console.log('camper', camper);
 
-  const { gallery, name, rating, reviews, description, location, id } = camper;
+  const { gallery, name, rating, reviews, description, location } = camper;
   return (
     <>
       <div className={css.card}>
