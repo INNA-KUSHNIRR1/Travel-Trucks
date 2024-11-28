@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Button from '../../components/Button/Button';
 import CampersList from '../../components/CampersList/CampersList';
 import Filters from '../../components/Filters/Filters';
@@ -10,12 +10,17 @@ import { selectCampers } from '../../redux/campers/selectors';
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
+  const [inputValue, setInputValue] = useState('');
+
+  const handleInputChange = e => {
+    setInputValue(e.target.value);
+  };
 
   const campers = useSelector(selectCampers);
-  console.log('campers', campers);
+  // console.log('campers', campers);
 
   useEffect(() => {
-    console.log('fetchCampers');
+    // console.log('fetchCampers');
 
     dispatch(fetchCampers());
   }, [dispatch]);
@@ -32,12 +37,15 @@ const CatalogPage = () => {
                 id="icon-Map"
                 width="20"
                 height="20"
+                fill={inputValue ? '#101828' : '#6c717b'}
               />
               <input
                 className={css.input}
                 type="text"
                 name="location"
-                placeholder="Kyiv, Ukraine"
+                value={inputValue}
+                onChange={handleInputChange}
+                placeholder="City"
               />
             </div>
           </label>

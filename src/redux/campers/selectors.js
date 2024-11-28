@@ -1,5 +1,5 @@
 export const selectCampers = state => {
-  console.log('state.campers', state.campers);
+  //   console.log('state.campers', state.campers);
 
   return state.campers;
 };

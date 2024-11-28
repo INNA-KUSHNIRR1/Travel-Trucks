@@ -1,0 +1,30 @@
+.sectionCamper {
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 46px 64px 52px;
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  list-style-type: none;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+}
+.infoForma {
+  display: flex;
+  gap: 40px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+}

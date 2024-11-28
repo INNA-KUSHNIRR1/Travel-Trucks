@@ -56,7 +56,7 @@ const Filters = () => {
                     fill={fill}
                     stroke={stroke}
                   />
-                  <span>{option}</span>
+                  <span className={css.option}>{option}</span>
                 </label>
               </li>
             ))}
@@ -87,7 +87,7 @@ const Filters = () => {
                       height="32"
                       fill={form.fill}
                     />
-                    <p>{form.type}</p>
+                    <span className={css.option}>{form.type}</span>
                   </div>
                 </label>
               </li>

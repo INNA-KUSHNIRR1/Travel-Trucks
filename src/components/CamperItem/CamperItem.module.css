@@ -56,10 +56,6 @@
   align-items: center;
   color: #101828;
 }
-.listOptions {
-  width: 100%;
-  height: 104px;
-}
 
 .description {
   text-overflow: ellipsis;

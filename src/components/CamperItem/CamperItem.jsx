@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import Button from '../Button/Button';
 import SvgIcon from '../SvgIcon/SvgIcon';
 import css from './CamperItem.module.css';
+import { Link } from 'react-router-dom';
+import OptionsList from '../OptionsList/OptionsList';
 
 const CamperItem = ({ camper, camperId }) => {
-  console.log('camper', camper);
+  //   console.log('camper', camper);
 
   const [isSelectedCamper, setIsSelectedCamper] = useState(false);
 
@@ -76,8 +78,11 @@ const CamperItem = ({ camper, camperId }) => {
               </div>
             </div>
             <p className={css.description}>{description}</p>
-            <ul className={css.listOptions}>listOptions</ul>
-            <Button size="normal">Show more</Button>
+            <OptionsList camper={camper} />
+
+            <Link to={`/catalog/${camperId}`}>
+              <Button size="normal">Show more</Button>
+            </Link>
           </div>
         </div>
       </div>
