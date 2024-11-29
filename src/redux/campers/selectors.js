@@ -10,7 +10,7 @@ export const selectedCamper = state => {
 };
 
 export const selectLoading = state => {
-  console.log('state.loading', state.loading);
+  // console.log('state.loading', state.loading);
   return state.loading;
 };
 

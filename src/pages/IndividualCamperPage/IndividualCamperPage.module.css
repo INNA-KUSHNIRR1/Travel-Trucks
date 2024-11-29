@@ -32,17 +32,17 @@
   width: 100%;
 }
 .link {
+  display: inline-block;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
   color: #101828;
   text-decoration: none;
-  transition: all 250ms ease-out;
+  /* transition: all 250ms ease-out; */
   padding-bottom: 24px;
 }
 .link:hover {
-  transform: scale(1.03);
-  color: initial;
+  color: #475467;
 }
 .activeLink {
   border-bottom: 5px solid #e44848;

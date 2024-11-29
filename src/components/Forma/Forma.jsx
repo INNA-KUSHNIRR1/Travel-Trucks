@@ -25,11 +25,8 @@ const Forma = () => {
     const { name } = formData;
     toast.success(
       `Hello, ${name}!
-
 We have received your camper booking request. We will check availability and get back to you via the provided email address to confirm your booking.
-
 If you have any questions, feel free to reach out!
-
 Best regards,
 TravelTrucks`,
       {
@@ -39,17 +36,18 @@ TravelTrucks`,
         style: {
           lineHeight: 1.5,
           fontWeight: 400,
-          background: '#6c717b',
-          color: 'white',
+          background: '#f7f7f7',
+          color: '#101828',
           fontSize: '20px',
           padding: '25px 25px',
           borderRadius: '10px',
-          maxWidth: '500px', // Ограничиваем ширину тоста
-          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+          border: '2px solid #475467',
+          maxWidth: '500px',
+          boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
         },
       },
     );
-    // Добавьте логику обработки отправки формы
+
     setFormData({ name: '', email: '', bookingDate: '', comment: '' });
   };
 

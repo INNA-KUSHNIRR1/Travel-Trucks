@@ -6,7 +6,7 @@ const CustomDatePicker = ({ value, onChange }) => {
   const today = new Date(); // Получаем текущую дату
 
   return (
-    <div className={css.inputDate}>
+    <div>
       <label htmlFor="bookingDate" className={css.srOnly}>
         Booking date
       </label>
@@ -17,9 +17,10 @@ const CustomDatePicker = ({ value, onChange }) => {
         placeholderText="Booking date*" // Плейсхолдер для инпута
         id="bookingDate" // id инпута
         name="bookingDate" // Имя инпута
-        className={css.customInput} // Класс для стилизации
+        className={css.inputDate}
         required // Обязательное поле
         minDate={today} // Устанавливаем минимум на текущую дату
+        calendarClassName={css.customCalendar} // Класс для стилизации
       />
     </div>
   );

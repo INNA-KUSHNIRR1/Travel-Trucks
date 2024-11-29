@@ -2,6 +2,8 @@ import CamperItem from '../CamperItem/CamperItem';
 import css from './CampersList.module.css';
 
 const CampersList = ({ campers }) => {
+  console.log('campers filters', campers);
+
   return (
     <>
       <div>

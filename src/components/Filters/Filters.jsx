@@ -1,31 +1,35 @@
-import { useState } from 'react';
 import SvgIcon from '../SvgIcon/SvgIcon';
 import css from './Filters.module.css';
 import { options } from '../../../helpers/options';
 import { forms } from '../../../helpers/forms';
 
-const Filters = () => {
-  const [selectedOption, setSelectedOption] = useState([]);
-  console.log('selectedOption', selectedOption);
-
-  const [selectedForm, setSelectedForm] = useState(null);
-  console.log('selectedForm', selectedForm);
-
+const Filters = ({ selectedOption, setFilters, selectedForm }) => {
   // Обираємо опції
+  //   const toggleCriterion = option => {
+  //     console.log('option', option);
+
+  //     setFilters(
+  //       prev =>
+  //         prev.includes(option)
+  //           ? prev.filter(item => item !== option) // видаляємо опцію якщо є
+  //           : [...prev, option], // Добавляємо опцію
+  //     );
+  //   };
+
   const toggleCriterion = option => {
-    console.log('option', option);
-
-    setSelectedOption(
-      prev =>
-        prev.includes(option)
-          ? prev.filter(item => item !== option) // видаляємо опцію якщо є
-          : [...prev, option], // Добавляємо опцію
-    );
+    setFilters(prevFilters => ({
+      ...prevFilters,
+      selectedOption: prevFilters.selectedOption.includes(option)
+        ? prevFilters.selectedOption.filter(item => item !== option)
+        : [...prevFilters.selectedOption, option],
+    }));
   };
-
   //обираємо форму кемпера
   const handleSelectForm = form => {
-    setSelectedForm(form);
+    setFilters(prevFilters => ({
+      ...prevFilters,
+      selectedForm: form,
+    }));
   };
 
   return (

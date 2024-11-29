@@ -23,7 +23,7 @@ const CamperItem = ({ camper, camperId }) => {
       updateSelected = [...storedSelected, camperId];
     }
     localStorage.setItem('selected', JSON.stringify(updateSelected));
-    setIsSelectedCamper(true);
+    setIsSelectedCamper(prev => !prev);
   };
   //отримуємо обрані кемпери при завантажені компонента
   useEffect(() => {
