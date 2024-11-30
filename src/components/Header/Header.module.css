@@ -14,3 +14,12 @@
   justify-content: flex-start;
   gap: 450px;
 }
+@media (min-width: 767px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .headerContent {
+    max-width: 767px;
+  }
+}

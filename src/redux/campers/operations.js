@@ -5,15 +5,24 @@ axios.defaults.baseURL = 'https://66b1f8e71ca8ad33d4f5f63e.mockapi.io';
 
 export const fetchCampers = createAsyncThunk(
   'fetchAll',
-  async (query, thunkAPI) => {
-    console.log('query', query);
-
+  async ({ page = 1, limit = 10, query = '' }, thunkAPI) => {
     try {
-      const response = await axios.get(`campers?${query}`);
-      //   console.log('response', response.data.items);
+      const response = await axios.get(
+        `campers?${query}&page=${page}&limit=${limit}`,
+      );
 
-      return response.data.items;
+      return {
+        items: response.data.items,
+        total: response.data.total,
+        message: '',
+      };
     } catch (error) {
+      if (error.response && error.response.status === 404) {
+        return thunkAPI.rejectWithValue({
+          message: 'No campers found for the given filters',
+          items: [],
+        });
+      }
       return thunkAPI.rejectWithValue(error.message);
     }
   },
@@ -24,8 +33,6 @@ export const getByIdCamperThink = createAsyncThunk(
   async (camperId, thunkAPI) => {
     try {
       const response = await axios.get(`campers/${camperId}`);
-      //   console.log('response', response.data);
-
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

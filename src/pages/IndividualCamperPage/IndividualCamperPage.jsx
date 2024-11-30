@@ -17,14 +17,14 @@ const IndividualCamperPage = () => {
   const isLoader = useSelector(selectLoading);
 
   useEffect(() => {
-    dispatch(getByIdCamperThink(id)); // Запрос данных при загрузке компонента
+    dispatch(getByIdCamperThink(id));
   }, [id, dispatch]);
   if (isLoader) return <Loader />;
   if (!camper) return <h2>Product not found</h2>;
 
   return (
     <>
-      <section className={css.sectionCamper}>
+      <section>
         <div className={css.container}>
           <CamperItemFull camper={camper} />
 

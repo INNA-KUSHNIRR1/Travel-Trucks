@@ -4,18 +4,6 @@ import { options } from '../../../helpers/options';
 import { forms } from '../../../helpers/forms';
 
 const Filters = ({ selectedOption, setFilters, selectedForm }) => {
-  // Обираємо опції
-  //   const toggleCriterion = option => {
-  //     console.log('option', option);
-
-  //     setFilters(
-  //       prev =>
-  //         prev.includes(option)
-  //           ? prev.filter(item => item !== option) // видаляємо опцію якщо є
-  //           : [...prev, option], // Добавляємо опцію
-  //     );
-  //   };
-
   const toggleCriterion = option => {
     setFilters(prevFilters => ({
       ...prevFilters,
@@ -34,25 +22,27 @@ const Filters = ({ selectedOption, setFilters, selectedForm }) => {
 
   return (
     <>
+      {/*Vehicle equipment*/}
       <div>
         <h2 className={css.filters}>Filters</h2>
         <div>
           <h3 className={css.title}>Vehicle equipment</h3>
           <ul className={css.listOptions}>
             {options.map(({ id, option, icon, fill, stroke }) => (
-              <li
-                key={id}
-                className={`${css.item} ${
-                  selectedOption.includes(option) ? css.selected : ''
-                }`}
-              >
-                <input
-                  type="checkbox"
-                  id={`criterion-${id}`}
-                  checked={selectedOption.includes(option)}
-                  onChange={() => toggleCriterion(option)}
-                />
-                <label htmlFor={`criterion-${id}`} className={css.label}>
+              <li key={id}>
+                <label
+                  className={`${css.item} ${
+                    selectedOption.includes(option) ? css.selected : ''
+                  }`}
+                  htmlFor={`criterion-${id}`}
+                >
+                  <input
+                    type="checkbox"
+                    name={'vehicleEquipment'}
+                    id={`criterion-${id}`}
+                    checked={selectedOption.includes(option)}
+                    onChange={() => toggleCriterion(option)}
+                  />
                   <SvgIcon
                     id={icon}
                     width="32"
@@ -66,18 +56,20 @@ const Filters = ({ selectedOption, setFilters, selectedForm }) => {
             ))}
           </ul>
         </div>
+        {/*Vehicle type*/}
         <div>
           <h3 className={css.title}>Vehicle type</h3>
           <ul className={`${css.listOptions} ${css.height}`}>
             {forms.map(form => (
-              <li
-                key={form.type}
-                className={`${css.item} ${css.boxSpecial} ${
-                  selectedForm === form.type ? css.selected : ''
-                }`}
-              >
-                <label>
+              <li key={form.type}>
+                <label
+                  htmlFor={`criterion-${form.id}`}
+                  className={`${css.item} ${css.boxSpecial} ${
+                    selectedForm === form.type ? css.selected : ''
+                  }`}
+                >
                   <input
+                    id={`criterion-${form.id}`}
                     type="radio"
                     name="vehicleType"
                     value={form.type}

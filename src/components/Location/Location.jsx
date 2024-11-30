@@ -2,11 +2,12 @@ import { useState } from 'react';
 import SvgIcon from '../SvgIcon/SvgIcon';
 import css from './Location.module.css';
 import { nanoid } from 'nanoid';
+import { useSelector } from 'react-redux';
+import { selectAllCities } from '../../redux/campers/selectors';
 
-const Location = ({ campers, selectedCity, setFilters }) => {
+const Location = ({ selectedCity, setFilters }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const cities = campers.map(camper => camper.location);
-  const uniqueArray = [...new Set(cities)];
+  const cities = useSelector(selectAllCities);
 
   const toggleList = () => {
     setIsOpen(true);
@@ -54,7 +55,7 @@ const Location = ({ campers, selectedCity, setFilters }) => {
       </label>
       {isOpen && (
         <ul className={css.dropdown}>
-          {uniqueArray.map(city => (
+          {cities.map(city => (
             <li
               key={nanoid()}
               className={css.listItem}

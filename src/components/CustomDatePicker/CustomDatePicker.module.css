@@ -12,11 +12,12 @@
 .inputDate {
   min-width: 524px;
 }
+
+/*                           H E L P       :((      ЯК ПЕРЕБИТИ ЦІ ... СТИЛІ         !!!!!!!!!!!!!!!*/
+
 .react-datepicker {
-  /* font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
-  font-size: 0.8rem; */
   background-color: #fff;
-  /* color: #000; */
+
   color: #101828;
   border: 1px solid #aeaeae;
   border-radius: 0.3rem;
@@ -26,7 +27,6 @@
 }
 /* Основной стиль календаря */
 .customCalendar {
-  /* width: 276px; */
   background-color: #ffffff; /* Фон календаря */
   border: 1px solid #475467 !important;
   color: #101828 !important;
@@ -65,7 +65,6 @@
 /* Текущий день */
 .customCalendar .react-datepicker__day--today {
   font-weight: bold;
-  border: 1px solid #b3009b !important;
 }
 
 /* Месяц и год в заголовке */
@@ -73,15 +72,12 @@
 .customCalendar .react-datepicker__current-month,
 .react-datepicker-time__header,
 .react-datepicker-year-header {
-  background-color: #b3009b;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
   color: #101828 !important;
-}
-.react-datepicker .react-datepicker__current-month {
 }
 
 /* Навигационные кнопки (стрелки) */
@@ -122,9 +118,3 @@
   color: #475467;
   text-transform: uppercase;
 }
-
-/* Стили для времени, если используется time picker */
-/* .customCalendar .react-datepicker__time-container {
-  background-color: #f9f9f9;
-  border-left: 1px solid #007bff;
-} */

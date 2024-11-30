@@ -21,7 +21,7 @@ const Forma = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+
     const { name } = formData;
     toast.success(
       `Hello, ${name}!

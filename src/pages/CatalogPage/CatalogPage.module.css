@@ -1,16 +1,21 @@
-.sectionCatalog {
-  /* background-color: white; */
-}
 .contentCatalog {
   display: flex;
   gap: 63px;
   margin: 0 auto;
   max-width: 1440px;
   padding: 46px 64px 52px;
-  /* height: calc(100vh - 72px); */
 }
+
+@media (max-width: 767px) {
+  .contentCatalog {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .boxTools {
   min-width: 366px;
+  max-width: 366px;
 }
 
 .label {

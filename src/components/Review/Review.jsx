@@ -6,7 +6,7 @@ const Review = ({ review }) => {
 
   const capitalLetter = reviewer_name[0];
   const totalStar = 5;
-  console.log('Rating received:', reviewer_rating);
+
   return (
     <>
       <li className={css.wrapper}>

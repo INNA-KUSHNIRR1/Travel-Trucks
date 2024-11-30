@@ -1,6 +1,3 @@
-.sectionCamper {
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -26,6 +23,16 @@
   gap: 40px;
 }
 
+@media (max-width: 767px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .container {
+    max-width: 767px;
+  }
+}
+
 .wrapper {
   display: flex;
   gap: 40px;
@@ -38,7 +45,6 @@
   line-height: 1.2;
   color: #101828;
   text-decoration: none;
-  /* transition: all 250ms ease-out; */
   padding-bottom: 24px;
 }
 .link:hover {

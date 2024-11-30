@@ -3,7 +3,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import css from './CustomDatePicker.module.css';
 
 const CustomDatePicker = ({ value, onChange }) => {
-  const today = new Date(); // Получаем текущую дату
+  const today = new Date();
 
   return (
     <div>
@@ -11,16 +11,16 @@ const CustomDatePicker = ({ value, onChange }) => {
         Booking date
       </label>
       <DatePicker
-        selected={value} // передаем значение из состояния
-        onChange={onChange} // передаем обработчик изменения
-        dateFormat="yyyy/MM/dd" // Формат отображаемой даты
-        placeholderText="Booking date*" // Плейсхолдер для инпута
-        id="bookingDate" // id инпута
-        name="bookingDate" // Имя инпута
+        selected={value}
+        onChange={onChange}
+        dateFormat="yyyy/MM/dd"
+        placeholderText="Booking date*"
+        id="bookingDate"
+        name="bookingDate"
         className={css.inputDate}
-        required // Обязательное поле
-        minDate={today} // Устанавливаем минимум на текущую дату
-        calendarClassName={css.customCalendar} // Класс для стилизации
+        required
+        minDate={today}
+        calendarClassName={css.customCalendar}
       />
     </div>
   );

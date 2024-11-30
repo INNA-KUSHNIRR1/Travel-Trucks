@@ -4,32 +4,38 @@ import SvgIcon from '../SvgIcon/SvgIcon';
 import css from './CamperItem.module.css';
 import { Link } from 'react-router-dom';
 import OptionsList from '../OptionsList/OptionsList';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getByIdCamperThink } from '../../redux/campers/operations';
+import { toggleFavorite } from '../../redux/campers/slice.js';
+import { selectFavoriteCampers } from '../../redux/campers/selectors.js';
 
 const CamperItem = ({ camper, camperId }) => {
   const dispatch = useDispatch();
-  //   console.log('camper', camper);
-
   const [isSelectedCamper, setIsSelectedCamper] = useState(false);
 
   const toggleSelect = () => {
-    const storedSelected = JSON.parse(localStorage.getItem('selected')) || [];
-    let updateSelected;
-
-    if (storedSelected.includes(camperId)) {
-      updateSelected = storedSelected.filter(id => id !== camperId);
-    } else {
-      updateSelected = [...storedSelected, camperId];
-    }
-    localStorage.setItem('selected', JSON.stringify(updateSelected));
+    dispatch(toggleFavorite(camperId));
     setIsSelectedCamper(prev => !prev);
   };
+
   //отримуємо обрані кемпери при завантажені компонента
+  const favoriteCampers = useSelector(selectFavoriteCampers);
   useEffect(() => {
-    const storedSelected = JSON.parse(localStorage.getItem('selected')) || [];
-    setIsSelectedCamper(storedSelected.includes(camperId));
-  }, [camperId]);
+    const storedFavorites =
+      JSON.parse(localStorage.getItem('favoriteCampers')) || [];
+    if (storedFavorites) {
+      storedFavorites.forEach(id => dispatch(toggleFavorite(id)));
+    }
+  }, [dispatch]);
+
+  useEffect(() => {
+    localStorage.setItem('favoriteCampers', JSON.stringify(favoriteCampers));
+  }, [favoriteCampers]);
+
+  useEffect(() => {
+    setIsSelectedCamper(favoriteCampers.includes(camperId));
+  }, [camperId, favoriteCampers]);
+
   const { gallery, name, rating, reviews, description, location } = camper;
 
   const handleGetByIdCamper = () => {

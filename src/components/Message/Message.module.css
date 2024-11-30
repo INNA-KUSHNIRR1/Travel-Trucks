@@ -1,0 +1,13 @@
+.errorMessage {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  min-width: 888px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid #dadde1;
+  border-radius: 20px;
+}
