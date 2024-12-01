@@ -59,6 +59,54 @@ You can view the project live at:
 - **[Figma](https://www.figma.com/)** — Tool for interface design and
   prototyping.
 
+## Installation 🚀
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/INNA-KUSHNIRR1/Travel-Trucks
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd your-project-folder-name
+```
+
+3. Install all dependencies: If you are using npm:
+
+```bash
+npm install
+```
+
+Or yarn:
+
+```bash
+yarn install
+```
+
+## Running the Project 🔥
+
+1. After installing the dependencies, execute the following command to run the
+   project locally:
+
+If using npm:
+
+```bash
+npm run dev
+```
+
+Or yarn:
+
+```bash
+yarn dev
+```
+
+2. Once the command executes, the project will be available at:
+   http://localhost:3000 🌐
+
+You can now view your project in the browser!
+
 ## 👩‍💻 Authors
 
 - **Inna Kushnir** — Developer [GitHub](https://github.com/INNA-KUSHNIRR1).
@@ -88,7 +136,7 @@ You can view the project live at:
 
 ## 🌐 Відвідайте сайт
 
-Ви можете переглянути проєкт у дії за посиланням::  
+Ви можете переглянути проєкт у дії за посиланням::
 [TravelTrucks - Сайт для оренди кемперів](https://travel-trucks-ten-chi.vercel.app/)
 
 ## 📷 Скріншот
@@ -123,10 +171,9 @@ You can view the project live at:
 
    ```bash
    git clone https://github.com/INNA-KUSHNIRR1/Travel-Trucks
-
-
-
    ```
+
+````
 
 2. Перейдіть до директорії проекту:
 
@@ -134,10 +181,7 @@ You can view the project live at:
     cd ім'я-папки-вашого-проекту
    ```
 
-```
 3. Встановіть усі залежності:
-
-```
 
 Якщо ви використовуєте npm:
 
@@ -178,3 +222,4 @@ yarn dev
 - **GoIT** — наставник [site](https://www.edu.goit.global)
 
 📧 Email: 3715777000i@gmale.com
+````
