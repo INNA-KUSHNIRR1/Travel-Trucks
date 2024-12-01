@@ -58,6 +58,7 @@
   .imgWrapper {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .wrapper {
     width: 100%;

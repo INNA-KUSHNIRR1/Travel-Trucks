@@ -14,7 +14,7 @@
 }
 @media (max-width: 767px) {
   .inputDate {
-    max-width: 355px;
+    min-width: 318px;
   }
 }
 /*                           H E L P       :((      ЯК ПЕРЕБИТИ ЦІ ... СТИЛІ         !!!!!!!!!!!!!!!*/
