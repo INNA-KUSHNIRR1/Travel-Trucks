@@ -19,7 +19,7 @@
   .headerContent {
     display: flex;
     gap: 0;
-    /* min-width: 320px; */
+
     max-width: 767px;
     justify-content: space-between;
     padding: 28px 14px;
