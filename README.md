@@ -171,9 +171,8 @@ You can now view your project in the browser!
 
    ```bash
    git clone https://github.com/INNA-KUSHNIRR1/Travel-Trucks
-   ```
 
-````
+   ```
 
 2. Перейдіть до директорії проекту:
 
@@ -222,4 +221,7 @@ yarn dev
 - **GoIT** — наставник [site](https://www.edu.goit.global)
 
 📧 Email: 3715777000i@gmale.com
-````
+
+```
+
+```
