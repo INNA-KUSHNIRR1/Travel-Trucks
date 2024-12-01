@@ -141,9 +141,9 @@ You can now view your project in the browser!
 
 ## 📷 Скріншот
 
-![Головна сторінка TravelTrucks](assets/screens/screenHome.png)
-![Сторінка каталогу TravelTrucks](assets/screens/screenCatalog.png)
-![Сторінка окремого кемпера TravelTrucks](assets/screens/screenCamper.png)
+![Головна сторінка TravelTrucks](./src/assets/screens/screenHome.png)
+![Сторінка каталогу TravelTrucks](./src/assets/screens/screenCatalog.png)
+![Сторінка окремого кемпера TravelTrucks](./src/assets/screens/screenCamper.png)
 
 ## 🛠 Інструменти та технології
 
