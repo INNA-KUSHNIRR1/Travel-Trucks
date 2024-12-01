@@ -18,13 +18,13 @@ application, a prebuilt backend API is used, available at:
 ## 🌐 Visit the Website
 
 You can view the project live at:  
-[TravelTrucks - Camper Rental Website](https://github.com/INNA-KUSHNIRR1/Travel-Trucks)
+[TravelTrucks - Camper Rental Website](https://travel-trucks-ten-chi.vercel.app/)
 
 ## 📷 Screenshots
 
-![TravelTrucks Homepage](assets/screens/screenHome.png)  
-![TravelTrucks Catalog Page](assets/screens/screenCatalog.png)  
-![TravelTrucks Camper Page](assets/screens/screenCamper.png)
+![TravelTrucks Homepage](./src/assets/screens/screenHome.png)  
+![TravelTrucks Catalog Page](./src/assets/screens/screenCatalog.png)  
+![TravelTrucks Camper Page](./src/assets/screens/screenCamper.png)
 
 ## 🛠 Tools and Technologies
 
@@ -85,7 +85,7 @@ You can view the project live at:
 ## 🌐 Відвідайте сайт
 
 Ви можете переглянути проєкт у дії за посиланням::  
-[TravelTrucks - Сайт для оренди кемперів](https://github.com/INNA-KUSHNIRR1/Travel-Trucks)
+[TravelTrucks - Сайт для оренди кемперів](https://travel-trucks-ten-chi.vercel.app/)
 
 ## 📷 Скріншот
 
