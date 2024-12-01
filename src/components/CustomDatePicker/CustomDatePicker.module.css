@@ -9,26 +9,29 @@
   white-space: nowrap;
   border: 0;
 }
-.inputDate {
-  min-width: 524px;
-}
-@media (max-width: 767px) {
-  .inputDate {
-    min-width: 318px;
-  }
-}
-/*                           H E L P       :((      ЯК ПЕРЕБИТИ ЦІ ... СТИЛІ         !!!!!!!!!!!!!!!*/
-
-.react-datepicker {
-  background-color: #fff;
-
-  color: #101828;
-  border: 1px solid #aeaeae;
-  border-radius: 0.3rem;
-  display: inline-block;
+.datePickerWrapper {
   position: relative;
-  line-height: initial;
 }
+.inputDate {
+  border-radius: 12px;
+  width: 100%;
+  height: 60px;
+  padding: 18px;
+  background-color: #f7f7f7;
+  outline: none;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.datePickerContainer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  margin-top: 8px;
+}
+
+/*                   H E L P       :((      ЯК ПЕРЕБИТИ ЦІ ... СТИЛІ         !!!!!!!!!!!!!!!*/
+
 /* Основной стиль календаря */
 .customCalendar {
   background-color: #ffffff; /* Фон календаря */

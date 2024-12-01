@@ -1,9 +1,12 @@
 /*color type*/
-
+.red {
+  box-shadow: 0px 4px 12px rgba(228, 72, 72, 0.3);
+}
 .red:hover,
 .red:focus,
 .red:focus-visible {
   background-color: var(--background-button-hover);
+  box-shadow: 0px 6px 18px rgba(228, 72, 72, 0.5);
 }
 
 .transparent {
@@ -11,12 +14,14 @@
   border: 1px solid var(--color-border);
   color: var(--text-colorB);
   padding: 16px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .transparent:hover,
 .transparent:focus,
 .transparent:focus-visible {
   border: 1px solid var(--color-border-button-hover);
+  box-shadow: 0px 4px 12px rgba(228, 72, 72, 0.3);
 }
 .normal {
   width: 166px;

@@ -36,7 +36,8 @@ const CamperItem = ({ camper, camperId }) => {
     setIsSelectedCamper(favoriteCampers.includes(camperId));
   }, [camperId, favoriteCampers]);
 
-  const { gallery, name, rating, reviews, description, location } = camper;
+  const { gallery, name, rating, reviews, description, location, price } =
+    camper;
 
   const handleGetByIdCamper = () => {
     dispatch(getByIdCamperThink(camperId));
@@ -57,7 +58,7 @@ const CamperItem = ({ camper, camperId }) => {
           <div className={css.title}>
             <h4>{name}</h4>
             <div className={css.price}>
-              <p>€8000</p>
+              <p>€{price.toFixed(0)}</p>
 
               <SvgIcon
                 id={

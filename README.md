@@ -2,7 +2,9 @@
 
 **TravelTrucks** is a project showcasing the functionality of a camper rental
 website. The web application includes several pages, such as a homepage, a
-catalog page, and a single camper page with reviews and a booking form.
+catalog page, and a single camper page with reviews and a booking form. The
+application is built with responsive design, ensuring a smooth user experience
+both on desktop and mobile devices.
 
 ## 🎯 Project Goals
 
@@ -69,7 +71,9 @@ You can view the project live at:
 **TravelTrucks** — це проєкт, який демонструє функціонал сайту для оренди
 кемперів. Веб-додаток включає кілька сторінок, серед яких домашня сторінка,
 сторінка каталогу і сторінка окремого кемпера з відгуками і формою для
-бронювання.
+бронювання. Застосунок побудований з урахуванням адаптивного дизайну, що
+забезпечує зручний користувацький досвід як на десктопних, так і на мобільних
+пристроях.
 
 ## 🎯 Мета проєкту
 

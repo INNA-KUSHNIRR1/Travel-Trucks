@@ -5,7 +5,6 @@ const campersSlice = createSlice({
   name: 'campers',
   initialState: {
     campers: [],
-    // selectedCampers: [],
     selectedCamper: null,
     filterLocation: null,
     filterOptions: [],

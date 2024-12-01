@@ -2,7 +2,8 @@ import SvgIcon from '../SvgIcon/SvgIcon';
 import css from './CamperItemFull.module.css';
 
 const CamperItemFull = ({ camper }) => {
-  const { gallery, name, rating, reviews, description, location } = camper;
+  const { gallery, name, rating, reviews, description, location, price } =
+    camper;
   return (
     <>
       <div className={css.card}>
@@ -30,7 +31,7 @@ const CamperItemFull = ({ camper }) => {
               </div>
             </div>
 
-            <p className={css.price}>€8000</p>
+            <p className={css.price}>€{price.toFixed(0)}</p>
           </div>
 
           <ul className={css.imgWrapper}>

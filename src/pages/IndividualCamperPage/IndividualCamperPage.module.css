@@ -4,6 +4,7 @@
   margin: 0 auto;
   max-width: 1440px;
   padding: 46px 64px 52px;
+  height: calc(100vh - 73.5px);
 }
 .info {
   display: flex;

@@ -8,7 +8,8 @@ const Forma = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    bookingDate: '',
+    startDate: null,
+    endDate: null,
     comment: '',
   });
   const handleChange = e => {
@@ -48,7 +49,13 @@ TravelTrucks`,
       },
     );
 
-    setFormData({ name: '', email: '', bookingDate: '', comment: '' });
+    setFormData({
+      name: '',
+      email: '',
+      startDate: null,
+      endDate: null,
+      comment: '',
+    });
   };
 
   return (
@@ -74,12 +81,13 @@ TravelTrucks`,
                 placeholder="Name*"
                 onChange={handleChange}
                 required
+                autoComplete="name"
               />
             </div>
             <div className={css.formGroup}>
               <label htmlFor="email" className={css.srOnly}>
                 Email
-              </label>{' '}
+              </label>
               <input
                 type="email"
                 id="email"
@@ -88,14 +96,20 @@ TravelTrucks`,
                 placeholder="Email*"
                 onChange={handleChange}
                 required
+                autoComplete="email"
               />
             </div>
-            <div className={css.formGroup}>
+            <div>
               <CustomDatePicker
-                value={formData.bookingDate}
-                onChange={date =>
-                  handleChange({ target: { name: 'bookingDate', value: date } })
-                }
+                startDate={formData.startDate}
+                endDate={formData.endDate}
+                onChange={({ startDate, endDate }) => {
+                  setFormData(prevData => ({
+                    ...prevData,
+                    startDate,
+                    endDate,
+                  }));
+                }}
               />
             </div>
             <div className={css.formGroup}>
@@ -110,6 +124,7 @@ TravelTrucks`,
                 placeholder="Comment"
                 rows="6"
                 required
+                autoComplete="comment"
               ></textarea>
             </div>
             <div className={css.btn}>

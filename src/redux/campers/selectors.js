@@ -11,11 +11,6 @@ export const selectMessage = state => state.message;
 export const selectAllCities = state => state.allCities;
 export const selectTotalItems = state => state.totalItems;
 
-// export const selectedCampers = state => {
-//   console.log('selectedCampers', state.selectedCampers);
-//   return state.selectedCampers;
-// };
-
 export const selectTotalItemsMemo = createSelector(
   [selectTotalItems],
   totalItems => totalItems,

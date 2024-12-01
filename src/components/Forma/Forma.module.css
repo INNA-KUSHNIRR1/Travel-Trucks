@@ -8,8 +8,7 @@
 }
 @media (max-width: 767px) {
   .container {
-    width: 350px;
-    min-width: 100%;
+    width: 100%;
     padding: 44px 15px;
   }
 }
@@ -56,8 +55,13 @@ textarea {
   padding: 18px;
   background-color: #f7f7f7;
   outline: none;
-
   border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+input:hover,
+textarea:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 input:focus,

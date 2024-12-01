@@ -23,7 +23,13 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
+.input:hover {
+  border-color: #939597;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
 .input::placeholder {
   color: #101828;
   opacity: 0.8;
