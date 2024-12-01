@@ -5,3 +5,9 @@
   gap: 44px;
   padding-top: 56px;
 }
+@media (max-width: 375px) {
+  .container {
+    width: 375px;
+    /* padding: 44px 15px; */
+  }
+}

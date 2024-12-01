@@ -12,6 +12,11 @@
 .inputDate {
   min-width: 524px;
 }
+@media (max-width: 375px) {
+  .inputDate {
+    min-width: 343px;
+  }
+}
 
 /*                           H E L P       :((      ЯК ПЕРЕБИТИ ЦІ ... СТИЛІ         !!!!!!!!!!!!!!!*/
 

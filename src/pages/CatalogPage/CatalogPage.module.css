@@ -6,10 +6,12 @@
   padding: 46px 64px 52px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 375px) {
   .contentCatalog {
+    max-width: 375px;
     flex-direction: column;
     align-items: flex-start;
+    padding: 46px 14px 52px;
   }
 }
 

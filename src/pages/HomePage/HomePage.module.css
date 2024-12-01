@@ -24,7 +24,15 @@
   margin: 0 auto;
   max-width: 1440px;
 }
-
+@media (max-width: 375px) {
+  .content {
+    width: 375px;
+    /* flex-direction: column;
+    align-items: flex-start; */
+    padding: 46px 14px 52px;
+    height: 100vh;
+  }
+}
 .title {
   font-weight: 600;
   font-size: 48px;

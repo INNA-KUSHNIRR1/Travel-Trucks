@@ -14,10 +14,10 @@
   margin-bottom: 40px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 375px) {
   .list {
-    min-width: 700px;
-    height: 1000px;
+    min-width: 375px;
+    height: 1900px;
   }
 }
 

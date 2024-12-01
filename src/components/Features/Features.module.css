@@ -34,3 +34,9 @@
   text-align: center;
   color: #101828;
 }
+@media (max-width: 375px) {
+  .container {
+    width: 375px;
+    padding: 44px 15px;
+  }
+}

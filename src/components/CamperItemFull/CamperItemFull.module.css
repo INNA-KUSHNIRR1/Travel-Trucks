@@ -54,11 +54,12 @@
   gap: 48px;
   overflow-x: auto;
 }
-@media (max-width: 767px) {
+@media (max-width: 375px) {
   .imgWrapper {
+    /* width: 100%; */
     flex-direction: column;
-    flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
   }
   .wrapper {
     width: 100%;
@@ -75,9 +76,9 @@
   overflow: hidden;
 }
 .img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .description {
@@ -88,5 +89,3 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-
-

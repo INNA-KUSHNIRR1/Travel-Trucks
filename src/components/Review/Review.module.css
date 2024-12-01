@@ -34,3 +34,9 @@
   color: #e44848;
   background-color: #f2f4f7;
 }
+@media (max-width: 375px) {
+  .container {
+    width: 375px;
+    padding: 44px 15px;
+  }
+}

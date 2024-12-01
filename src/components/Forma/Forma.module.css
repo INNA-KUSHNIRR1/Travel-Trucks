@@ -6,6 +6,13 @@
   border: 1px solid #dadde1;
   border-radius: 10px;
 }
+@media (max-width: 375px) {
+  .container {
+    width: 375px;
+    padding: 44px 15px;
+  }
+}
+
 .bookNow {
   display: flex;
   flex-direction: column;

@@ -65,10 +65,22 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-@media (max-width: 767px) {
+@media (max-width: 375px) {
   .card {
     display: flex;
     flex-direction: column;
     gap: 24px;
+  }
+  .wrapper {
+    width: 375px;
+    /* display: flex;
+    flex-direction: column;
+    gap: 8px; */
+  }
+  .imgWrapper {
+    border-radius: 10px;
+    width: 375px;
+    height: 320px;
+    overflow: hidden;
   }
 }
