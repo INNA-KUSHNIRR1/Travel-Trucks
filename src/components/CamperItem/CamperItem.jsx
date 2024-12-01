@@ -44,7 +44,7 @@ const CamperItem = ({ camper, camperId }) => {
 
   return (
     <>
-      <div className={css.card}>
+      <li className={css.card}>
         <div className={css.imgWrapper}>
           <img
             className={css.img}
@@ -101,7 +101,7 @@ const CamperItem = ({ camper, camperId }) => {
             </Link>
           </div>
         </div>
-      </div>
+      </li>
     </>
   );
 };

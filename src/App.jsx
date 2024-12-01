@@ -15,7 +15,7 @@ const IndividualCamperPage = lazy(() =>
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage'));
 const Features = lazy(() => import('./components/Features/Features'));
 const Reviews = lazy(() => import('./components/Reviews/Reviews'));
-const Layout = lazy(() => import('./components/Layout'));
+const Layout = lazy(() => import('./components/Layout/Layout'));
 
 function App() {
   const dispatch = useDispatch();

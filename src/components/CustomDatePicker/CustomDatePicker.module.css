@@ -12,12 +12,11 @@
 .inputDate {
   min-width: 524px;
 }
-@media (max-width: 375px) {
+@media (max-width: 767px) {
   .inputDate {
-    min-width: 343px;
+    max-width: 355px;
   }
 }
-
 /*                           H E L P       :((      ЯК ПЕРЕБИТИ ЦІ ... СТИЛІ         !!!!!!!!!!!!!!!*/
 
 .react-datepicker {

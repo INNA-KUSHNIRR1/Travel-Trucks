@@ -1,4 +1,5 @@
 .sectionHeader {
+  min-width: 100vw;
   background-color: #f7f7f7;
   border-bottom: 1px solid #f2f4f7;
 }
@@ -14,15 +15,12 @@
   justify-content: flex-start;
   gap: 450px;
 }
-@media (max-width: 375px) {
-  .wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+@media (max-width: 767px) {
   .headerContent {
     display: flex;
     gap: 0;
-    width: 375px;
+    /* min-width: 320px; */
+    max-width: 767px;
     justify-content: space-between;
     padding: 28px 14px;
   }

@@ -54,12 +54,10 @@
   gap: 48px;
   overflow-x: auto;
 }
-@media (max-width: 375px) {
+@media (max-width: 767px) {
   .imgWrapper {
-    /* width: 100%; */
-    flex-direction: column;
-    /* flex-direction: row;
-    flex-wrap: wrap; */
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .wrapper {
     width: 100%;
