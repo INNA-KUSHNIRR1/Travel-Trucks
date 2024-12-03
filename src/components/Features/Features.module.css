@@ -40,3 +40,6 @@
     padding: 44px 15px;
   }
 }
+.parameters {
+  text-transform: capitalize;
+}

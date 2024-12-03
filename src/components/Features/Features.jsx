@@ -2,10 +2,19 @@ import css from './Features.module.css';
 import OptionsList from '../OptionsList/OptionsList';
 import { useSelector } from 'react-redux';
 import { selectedCamper } from '../../redux/campers/selectors';
+import { nanoid } from 'nanoid';
 
 const Features = () => {
   const camper = useSelector(selectedCamper);
   const { form, length, width, height, tank, consumption } = camper;
+  const camperCurrent = {
+    form: form,
+    length: length,
+    width: width,
+    height: height,
+    tank: tank,
+    consumption: consumption,
+  };
 
   return (
     <>
@@ -16,7 +25,15 @@ const Features = () => {
 
         <h4 className={css.title}>Vehicle details</h4>
         <ul className={css.listData}>
-          <li className={css.item}>
+          {Object.entries(camperCurrent).map(([key, value]) => {
+            return (
+              <li key={nanoid()} className={css.item}>
+                <span className={css.parameters}>{key}</span>
+                <span>{value}</span>
+              </li>
+            );
+          })}
+          {/* <li className={css.item}>
             <span>Form</span>
             <span>{form}</span>
           </li>
@@ -39,7 +56,7 @@ const Features = () => {
           <li className={css.item}>
             <span>Consumption</span>
             <span>{consumption}</span>
-          </li>
+          </li> */}
         </ul>
       </div>
     </>

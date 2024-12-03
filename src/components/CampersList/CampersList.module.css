@@ -7,8 +7,8 @@
 
 .list {
   min-width: 888px;
-  /* height: 1568px; */
-  height: calc(100vh - 275px);
+  height: 1568px;
+  /* height: calc(100vh - 275px); */
   overflow-y: auto;
   display: flex;
   flex-direction: column;

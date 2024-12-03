@@ -6,7 +6,7 @@ import { useState } from 'react';
 const CustomDatePicker = ({ startDate, endDate, onChange }) => {
   const [isCalendarOpen, setCalendarOpen] = useState(false); // Состояние для отображения календаря
   const today = new Date();
-
+  // const [currentMonth, setCurrentMonth] = useState(today.getMonth());
   const handleCalendarToggle = () => {
     setCalendarOpen(prevState => !prevState);
   };
@@ -18,6 +18,7 @@ const CustomDatePicker = ({ startDate, endDate, onChange }) => {
       setCalendarOpen(false);
     }
   };
+
   return (
     <div className={css.datePickerWrapper}>
       <label htmlFor="bookingDate" className={css.srOnly}>
@@ -42,7 +43,7 @@ const CustomDatePicker = ({ startDate, endDate, onChange }) => {
       {isCalendarOpen && (
         <div className={css.datePickerContainer}>
           <DatePicker
-            selected={startDate}
+            selected={startDate || today}
             onChange={handleDateChange}
             startDate={startDate}
             endDate={endDate}
@@ -50,6 +51,12 @@ const CustomDatePicker = ({ startDate, endDate, onChange }) => {
             dateFormat="yyyy/MM/dd"
             minDate={today}
             inline
+            // dayClassName={date => {
+            //   // Убираем ненужное выделение других дат
+            //   const isSelected =
+            //     startDate && date.getTime() === startDate.getTime();
+            //   return isSelected ? '' : null;
+            // }}
             calendarClassName={css.customCalendar}
           />
         </div>

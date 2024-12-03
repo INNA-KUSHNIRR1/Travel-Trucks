@@ -1,4 +1,3 @@
-
 import './index.css';
 import { Route, Routes } from 'react-router-dom';
 import { lazy, Suspense, useEffect } from 'react';
@@ -28,20 +27,18 @@ function App() {
   return (
     <>
       <Suspense fallback={<Loader />}>
-        <div className="app">
-          <Layout>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/catalog" element={<CatalogPage />} />
-              <Route path="/catalog/:id" element={<IndividualCamperPage />}>
-                <Route index element={<Features />} />
-                <Route path="features" element={<Features />} />
-                <Route path="reviews" element={<Reviews />} />
-              </Route>
-              <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-          </Layout>
-        </div>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="/catalog" element={<CatalogPage />} />
+            <Route path="/catalog/:id" element={<IndividualCamperPage />}>
+              <Route index element={<Features />} />
+              <Route path="features" element={<Features />} />
+              <Route path="reviews" element={<Reviews />} />
+            </Route>
+            <Route path="*" element={<NotFoundPage />} />
+          </Route>
+        </Routes>
       </Suspense>
     </>
   );
