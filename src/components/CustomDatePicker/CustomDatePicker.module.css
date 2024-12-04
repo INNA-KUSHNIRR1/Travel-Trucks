@@ -30,8 +30,6 @@
   margin-top: 8px;
 }
 
-/*                   H E L P       :((      ЯК ПЕРЕБИТИ ЦІ ... СТИЛІ         !!!!!!!!!!!!!!!*/
-
 /* Основной стиль календаря */
 :global(.customCalendar) {
   background-color: #ffffff;
@@ -81,7 +79,6 @@
   font-size: 12px;
   line-height: 1.2;
   text-align: center;
-
   text-transform: uppercase;
   background-color: #ffffff;
   display: flex;
@@ -92,10 +89,6 @@
 :global(div.react-datepicker__month) {
   background-color: #ffffff;
 }
-
-/* Стили для дней */
-
-/* Выбранный день */
 
 :global(.react-datepicker__day) {
   font-family: 'Inter', sans-serif;
@@ -111,13 +104,11 @@
   height: 32px;
 }
 
-/* При наведении */
 :global(.react-datepicker__day:hover) {
   border-radius: 32px;
   width: 36px;
   height: 32px;
   background-color: #697381;
-  /* color: #f7f7f7; */
   cursor: pointer;
 }
 :global(.react-datepicker__day:not([aria-disabled='true']):hover) {
@@ -143,17 +134,8 @@
   color: #f7f7f7;
 }
 
-/* :global(div.react-datepicker__day--keyboard-selected) {
-  background-color: none;
-   color: #f7f7f7; 
-} */
-
-:global(.react-datepicker__day--keyboard-selected) {
-  /* background-color: none; */
-  color: #f7f7f7;
-  /* border-radius: 0.3rem;
-  background-color: rgb(83, 172, 102);
-  color: rgb(0, 0, 0); */
+:global(div.react-datepicker__day--keyboard-selected) {
+  background-color: rgb(255, 255, 255);
 }
 :global(.react-datepicker__day--selected:not([aria-disabled='true']):hover, ) {
   border-radius: 32px;
@@ -168,40 +150,16 @@
   background-color: #475467;
   color: #f7f7f7;
 }
-:global(.react-datepicker__day--in-range:not([aria-disabled='true']):hover) {
-  border-radius: 32px;
-  width: 36px;
-  height: 32px;
-  background-color: #475467;
-}
-/* Текущий день */
-:global(.react-datepicker__day--today) {
-  /* background-color: transparent !important; /* Убирает выделение */
-  /*color: #101828 !important;
-  font-weight: normal !important; */
-  font-weight: bold;
-  border-radius: 32px;
-  width: 36px;
-  height: 32px;
-}
-/* :global(div.react-datepicker__day--today:hover) {
-  font-weight: bold;
-} */
-
-/* Месяц и год в заголовке */
 
 /* Отключенные дни */
 :global(div.react-datepicker__day--disabled) {
   color: #475467;
-  cursor: not-allowed;
 }
 :global(div.react-datepicker__day--disabled:hover) {
   background: none;
-  color: #475467;
   cursor: not-allowed;
 }
 
-/* Всплывающие месяца */
 :global(.react-datepicker__month) {
   background-color: #f1f1f1;
   padding: 8px;
